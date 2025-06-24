@@ -1,0 +1,20 @@
+server:
+  port: 8080
+#langchain4j测试模型
+langchain4j:
+  open-ai:
+    chat-model:
+      api-key: ${DEEP_SEEK_API_KEY}
+      model-name: deepseek-chat
+      # model-name: deepseek-reasoner
+      base-url: https://api.deepseek.com/v1
+#请求和响应日志
+      log-requests: true
+      log-responses: true
+#      api-key: demo
+#      model-name: gpt-4o-mini
+#      base-url: http://langchain4j.dev/demo/openai/v1
+#启用日志debug级别
+logging:
+  level:
+    root: debug

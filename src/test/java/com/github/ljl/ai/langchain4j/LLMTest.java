@@ -1,7 +1,9 @@
 package com.github.ljl.ai.langchain4j;
 
 import dev.langchain4j.model.openai.OpenAiChatModel;
+import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
 /**
  * @program: java-ai-langchain4j
@@ -10,6 +12,7 @@ import org.junit.jupiter.api.Test;
  * @create: 2025-06-24 22:27
  **/
 
+@SpringBootTest
 public class LLMTest {
     @Test
     void TestDemo() {
@@ -23,6 +26,17 @@ public class LLMTest {
                 .modelName("gpt-4o-mini").build(); //设置模型名称
         //向模型提问
         String answer = model.chat("你好");
+        //输出结果
+        System.out.println(answer);
+    }
+
+    @Resource
+    private OpenAiChatModel openAiChatModel;
+
+    @Test
+    void TestSpringBoot() {
+        //向模型提问
+        String answer = openAiChatModel.chat("你好");
         //输出结果
         System.out.println(answer);
     }
