@@ -1,8 +1,10 @@
 package com.github.ljl.ai.langchain4j;
 
+import dev.langchain4j.community.model.dashscope.QwenChatModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
 import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 /**
@@ -33,10 +35,22 @@ public class LLMTest {
     @Resource
     private OpenAiChatModel openAiChatModel;
 
+    @Resource
+    private QwenChatModel qwenChatModel;
+
     @Test
-    void TestSpringBoot() {
+    void TestOpenAi() {
         //向模型提问
+        // String answer = openAiChatModel.chat("你好");
         String answer = openAiChatModel.chat("你好");
+        //输出结果
+        System.out.println(answer);
+    }
+    @Test
+    void TestQwen() {
+        //向模型提问
+        // String answer = openAiChatModel.chat("你好");
+        String answer = qwenChatModel.chat("你好");
         //输出结果
         System.out.println(answer);
     }
