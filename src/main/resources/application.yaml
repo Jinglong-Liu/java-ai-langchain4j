@@ -11,6 +11,12 @@ langchain4j:
 #请求和响应日志
       log-requests: true
       log-responses: true
+  community:
+    dashscope:
+      chat-model:
+        #阿里百炼平台
+        api-key: ${DASH_SCOPE_API_KEY}
+        model-name: qwen-max
 #      api-key: demo
 #      model-name: gpt-4o-mini
 #      base-url: http://langchain4j.dev/demo/openai/v1
