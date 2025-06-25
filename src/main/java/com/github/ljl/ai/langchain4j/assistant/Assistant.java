@@ -10,7 +10,7 @@ import dev.langchain4j.service.spring.AiServiceWiringMode;
  * @create: 2025-06-24 23:35
  **/
 
-@AiService(wiringMode = AiServiceWiringMode.EXPLICIT, chatModel = "qwenChatModel")
+@AiService(wiringMode = AiServiceWiringMode.EXPLICIT,chatModel = "qwenChatModel")
 public interface Assistant {
     String chat(String userMessage);
 }
