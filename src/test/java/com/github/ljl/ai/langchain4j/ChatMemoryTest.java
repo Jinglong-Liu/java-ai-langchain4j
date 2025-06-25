@@ -88,4 +88,13 @@ public class ChatMemoryTest {
         String answer3 = separateChatAssistant.chat(2,"我是谁");
         System.out.println(answer3);
     }
+
+
+    @Test
+    public void testV() {
+        String answer1 = separateChatAssistant.chat2(1, "我是环环");
+        System.out.println(answer1);
+        String answer2 = separateChatAssistant.chat2(1, "我是谁");
+        System.out.println(answer2);
+    }
 }
